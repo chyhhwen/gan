@@ -32,9 +32,9 @@ class generator(nn.Module):
         x = torch.tanh(self.deconv5(x))
         return x
 
-class discrimnator(nn.Module):
+class discriminator(nn.Module):
     def __init__(self, d=128):
-        super(discrimnator, self).__init__()
+        super(discriminator, self).__init__()
         self.conv1 = nn.Conv2d(1,d, 4, 2, 1)
         self.conv2 = nn.Conv2d(d, d * 2, 4, 2, 1)
         self.conv2_bn = nn.BatchNorm2d(d * 2)
