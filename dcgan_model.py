@@ -8,7 +8,7 @@ def normal_init(m, mean, std):
         m.bias.data.zero_()
 
 class generator(nn.Module):
-    def __int__(self, d=128):
+    def __init__(self, d=128):
         super(generator, self).__init__()
         self.deconv1 = nn.ConvTranspose2d(100, d * 8, 4, 1 ,0)
         self.deconv1_bn = nn.BatchNorm2d(d * 8)
